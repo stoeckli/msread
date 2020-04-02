@@ -6,6 +6,7 @@ version = (0, 4, 0)
 
 # import modules
 import os.path
+import builtins
 
 # import objects
 from .centroid import Centroid
@@ -125,7 +126,7 @@ def resolve_format(path):
     # get format from xml files
     if extension == '.xml':
         
-        document = open(path, 'r')
+        document = builtins.open(path, 'r')
         data = document.read(500)
         document.close()
         
